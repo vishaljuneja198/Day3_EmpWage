@@ -1,9 +1,6 @@
 package com.bridgelabz;
 import java.util.*;
 
-
-import java.util.*;
-
 public class EmpWageComputation {
 
     public static void main(String[] args) {
@@ -11,18 +8,28 @@ public class EmpWageComputation {
 
         Random randNum = new Random();
 
-        int hour = 0;
+        int hour = 0, sum = 0;
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 20; i++) {
+
             int check = randNum.nextInt(3);
 
-            if (check == 0)
-                hour = 0;
-            else if (check == 1)
-                hour = 4;
-            else
-                hour = 8;
+            switch(check){
+                case 0 :
+                    hour=0;
+                    break;
+                case 1 :
+                    hour=4;
+                    break;
+                default :
+                    hour=8;
+            }
+
+            System.out.println("daily Wages are : "+hour*20);
+            sum+=hour*20;
         }
-        System.out.println("daily wage of employee is : " + (hour * 20));
+
+        System.out.println("Total Wages in 20 day period "+sum);
+
     }
 }
