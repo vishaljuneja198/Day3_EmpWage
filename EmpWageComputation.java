@@ -8,9 +8,10 @@ public class EmpWageComputation {
 
         Random randNum = new Random();
 
-        int hour = 0, sum = 0;
+        int i = 0, hour = 0, sum = 0, maxHour=0;
 
-        for (int i = 0; i < 20; i++) {
+        while ( i<20 && maxHour<100 ) {
+
 
             int check = randNum.nextInt(3);
 
@@ -24,9 +25,10 @@ public class EmpWageComputation {
                 default :
                     hour=8;
             }
-
             System.out.println("daily Wages are : "+hour*20);
             sum+=hour*20;
+            i++;
+            maxHour+=hour;
         }
 
         System.out.println("Total Wages in 20 day period "+sum);
