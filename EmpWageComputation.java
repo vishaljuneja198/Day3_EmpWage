@@ -18,6 +18,5 @@ class EmployeeWageComputation {
             }
             System.out.println("daily wage of employee is : "+(hour*20));
         }
-
     }
 }
